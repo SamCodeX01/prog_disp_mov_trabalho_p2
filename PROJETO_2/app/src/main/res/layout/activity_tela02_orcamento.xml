@@ -7,24 +7,157 @@
     android:layout_height="match_parent"
     tools:context=".Tela_02_Orcamento">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="119dp"
-        android:layout_marginTop="309dp"
-        android:text="Forms do cliente"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/btnCancelarOrcamento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="11dp"
-        android:text="sair"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="4dp"
+        android:text="CANCELAR"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/btnSolicitarOrcamento"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Endereço"
+        app:layout_constraintStart_toStartOf="@+id/editTextText11"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText11" />
+
+    <EditText
+        android:id="@+id/editTextText9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Cpf"
+        app:layout_constraintStart_toStartOf="@+id/editTextText8"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText8" />
+
+    <EditText
+        android:id="@+id/editTextText10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Email"
+        app:layout_constraintStart_toStartOf="@+id/editTextText9"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText9" />
+
+    <EditText
+        android:id="@+id/editTextText11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Celular"
+        app:layout_constraintStart_toStartOf="@+id/editTextText10"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText10" />
+
+    <EditText
+        android:id="@+id/editTextText8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Nome completo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/editTextText13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="1dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Nome do pacote"
+        app:layout_constraintEnd_toEndOf="@+id/editTextText12"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText12" />
+
+    <EditText
+        android:id="@+id/editTextText14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Data do evento"
+        app:layout_constraintStart_toStartOf="@+id/editTextText13"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText13" />
+
+    <EditText
+        android:id="@+id/editTextText15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Número de convidados"
+        app:layout_constraintStart_toStartOf="@+id/editTextText14"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText14" />
+
+    <EditText
+        android:id="@+id/editTextText17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Horario de termino"
+        app:layout_constraintStart_toStartOf="@+id/editTextText18"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText16" />
+
+    <EditText
+        android:id="@+id/editTextText16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Horario de inicio"
+        app:layout_constraintStart_toStartOf="@+id/editTextText15"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText15" />
+
+    <EditText
+        android:id="@+id/editTextText18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Endereço do local do evento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText17" />
+
+    <Button
+        android:id="@+id/btnSolicitarOrcamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="SOLICITAR ORÇAMENTO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnCancelarOrcamento" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Pedido de Orçamento"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
