@@ -14,49 +14,25 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="129dp"
         android:backgroundTint="#2FD9CF"
         android:text="INTRANET"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="379dp"
-        android:src="@drawable/servicos_1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnOrcamento" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="11dp"
-        android:layout_marginEnd="11dp"
-        android:layout_marginBottom="203dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/servicos_2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
         android:id="@+id/btnOrcamento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="114dp"
-        android:layout_marginBottom="31dp"
         android:text="Solicitar Orçamento"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintEnd_toStartOf="@+id/btnIntranet"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="56dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="364dp"
+        android:layout_height="581dp"
+        app:srcCompat="@drawable/img07"
+        tools:layout_editor_absoluteX="23dp"
+        tools:layout_editor_absoluteY="116dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
