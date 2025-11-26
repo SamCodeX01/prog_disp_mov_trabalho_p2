@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -17,7 +18,8 @@ import com.example.projeto_2.classes.OrcamentoDAO;
 
 public class Tela_03_Login extends AppCompatActivity {
     private Button btnLogin;
-    private TextView txtCadastroMusico;
+    private TextView txtCadastrarMusico;
+    private EditText etUsuario, etPassword;
     private OrcamentoDAO orc;
 
 
@@ -39,27 +41,35 @@ public class Tela_03_Login extends AppCompatActivity {
 
     private void mainConfig() {
 
-        // Teste de SELECT
+        // Teste de SELECT //////////////////////////////////////////////
         orc = new OrcamentoDAO(this);
-        Orcamento obj = orc.consultarOrcamentoPorNome("Samuel");
+        Orcamento obj = orc.consultarOrcamentoPorNome("Samuel"); //
         Log.e("TESTE_BANCO", obj.getEmail());
+        // //////////////////////////////////////////////////////////////
 
+        etUsuario = findViewById(R.id.etUsuario);
+        etPassword = findViewById(R.id.etPassword);
         btnLogin = findViewById(R.id.btnLogin);
-        txtCadastroMusico = findViewById(R.id.txtCadastroMusico);
+        txtCadastrarMusico = findViewById(R.id.txtCadastroMusico);
     }
     private void listeners() {
 
         // Botão de LOGIN
         btnLogin.setOnClickListener(evt -> {
-            startActivity(new Intent(this, Tela_05_SolicitacoesGestor.class));
+            String user = etUsuario.getText().toString();
+            String password = etPassword.getText().toString();
+
+//            if (user.equals("Admin") && password.equals("123"))
+                startActivity(new Intent(this, Tela_05_SolicitacoesGestor.class));
         });
 
         // Botão de CADASTRO DE MÚSICO
-        txtCadastroMusico.setOnClickListener(evt -> {
+        txtCadastrarMusico.setOnClickListener(evt -> {
             startActivity(new Intent(this, Tela_04_CadastroMusico.class));
         });
 
-        // FAZER BOTÃO DE VOLTAR?
+
+        // FAZER BOTÃO DE VOLTAR? ///////////////////////////////
 
     }
 

@@ -81,10 +81,10 @@
                 app:startIconTint="@color/blue">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etEmail"
+                    android:id="@+id/etUsuario"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Email"
+                    android:hint="Usuário"
                     android:inputType="textEmailAddress"
                     android:textColor="@color/dark_gray" />
 
@@ -139,5 +139,13 @@
         android:text="Cadastrar um novo Músico"
         android:textColor="@color/white"
         android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="\nUser:    Admin \nPassword: 123"
+        android:textAlignment="textEnd"
+        android:textStyle="bold" />
 
 </LinearLayout>
