@@ -18,85 +18,85 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText6"
+        android:id="@+id/txtEmailMusico"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:ems="10"
         android:inputType="text"
         android:text="Email"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText7"
+        app:layout_constraintEnd_toEndOf="@+id/txtEnderecoMusico"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextText7"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText5" />
+        app:layout_constraintStart_toStartOf="@+id/txtEnderecoMusico"
+        app:layout_constraintTop_toBottomOf="@+id/txtCelularMusico" />
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/txtInstrumentoMusico"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Nascimento"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText4"
+        android:text="Instrumento que toca"
+        app:layout_constraintEnd_toEndOf="@+id/txtGenero"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextText4"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+        app:layout_constraintStart_toStartOf="@+id/txtGenero"
+        app:layout_constraintTop_toBottomOf="@+id/txtNomeMusico" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/txtCpfMusico"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="92dp"
         android:ems="10"
         android:inputType="text"
         android:text="Cpf"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText2"
+        app:layout_constraintEnd_toEndOf="@+id/txtNomeMusico"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextText2"
+        app:layout_constraintStart_toStartOf="@+id/txtNomeMusico"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/txtNomeMusico"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:ems="10"
         android:inputType="text"
         android:text="Nome"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText3"
+        app:layout_constraintEnd_toEndOf="@+id/txtInstrumentoMusico"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextText3"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintStart_toStartOf="@+id/txtInstrumentoMusico"
+        app:layout_constraintTop_toBottomOf="@+id/txtCpfMusico" />
 
     <EditText
-        android:id="@+id/editTextText4"
+        android:id="@+id/txtGenero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:ems="10"
         android:inputType="text"
         android:text="Genero"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText5"
+        app:layout_constraintEnd_toEndOf="@+id/txtCelularMusico"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextText5"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
+        app:layout_constraintStart_toStartOf="@+id/txtCelularMusico"
+        app:layout_constraintTop_toBottomOf="@+id/txtInstrumentoMusico" />
 
     <EditText
-        android:id="@+id/editTextText5"
+        android:id="@+id/txtCelularMusico"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:ems="10"
         android:inputType="text"
         android:text="Celular"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText6"
+        app:layout_constraintEnd_toEndOf="@+id/txtEmailMusico"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextText6"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText4" />
+        app:layout_constraintStart_toStartOf="@+id/txtEmailMusico"
+        app:layout_constraintTop_toBottomOf="@+id/txtGenero" />
 
     <EditText
-        android:id="@+id/editTextText7"
+        android:id="@+id/txtEnderecoMusico"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
@@ -105,7 +105,7 @@
         android:inputType="text"
         android:text="Endereco"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText6" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEmailMusico" />
 
     <Button
         android:id="@+id/btnCadastrarMusico"

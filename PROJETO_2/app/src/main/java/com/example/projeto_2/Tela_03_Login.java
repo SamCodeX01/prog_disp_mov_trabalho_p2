@@ -2,6 +2,7 @@ package com.example.projeto_2;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -11,9 +12,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.projeto_2.classes.Orcamento;
+import com.example.projeto_2.classes.OrcamentoDAO;
+
 public class Tela_03_Login extends AppCompatActivity {
     private Button btnLogin;
     private TextView txtCadastroMusico;
+    private OrcamentoDAO orc;
 
 
     @Override
@@ -33,6 +38,12 @@ public class Tela_03_Login extends AppCompatActivity {
     }
 
     private void mainConfig() {
+
+        // Teste de SELECT
+        orc = new OrcamentoDAO(this);
+        Orcamento obj = orc.consultarOrcamentoPorNome("Samuel");
+        Log.e("TESTE_BANCO", obj.getEmail());
+
         btnLogin = findViewById(R.id.btnLogin);
         txtCadastroMusico = findViewById(R.id.txtCadastroMusico);
     }

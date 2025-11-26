@@ -21,51 +21,51 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText12"
+        android:id="@+id/txtEndereco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="text"
         android:text="Endereço"
-        app:layout_constraintStart_toStartOf="@+id/editTextText11"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText11" />
+        app:layout_constraintStart_toStartOf="@+id/txtCelular"
+        app:layout_constraintTop_toBottomOf="@+id/txtCelular" />
 
     <EditText
-        android:id="@+id/editTextText9"
+        android:id="@+id/txtCpf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:ems="10"
         android:inputType="text"
         android:text="Cpf"
-        app:layout_constraintStart_toStartOf="@+id/editTextText8"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText8" />
+        app:layout_constraintStart_toStartOf="@+id/txtNome"
+        app:layout_constraintTop_toBottomOf="@+id/txtNome" />
 
     <EditText
-        android:id="@+id/editTextText10"
+        android:id="@+id/txtEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="7dp"
         android:ems="10"
         android:inputType="text"
         android:text="Email"
-        app:layout_constraintStart_toStartOf="@+id/editTextText9"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText9" />
+        app:layout_constraintStart_toStartOf="@+id/txtCpf"
+        app:layout_constraintTop_toBottomOf="@+id/txtCpf" />
 
     <EditText
-        android:id="@+id/editTextText11"
+        android:id="@+id/txtCelular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="13dp"
         android:ems="10"
         android:inputType="text"
         android:text="Celular"
-        app:layout_constraintStart_toStartOf="@+id/editTextText10"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText10" />
+        app:layout_constraintStart_toStartOf="@+id/txtEmail"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
 
     <EditText
-        android:id="@+id/editTextText8"
+        android:id="@+id/txtNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
@@ -77,7 +77,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/editTextText13"
+        android:id="@+id/txtNomePacote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
@@ -85,52 +85,52 @@
         android:ems="10"
         android:inputType="text"
         android:text="Nome do pacote"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText12"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText12" />
+        app:layout_constraintEnd_toEndOf="@+id/txtEndereco"
+        app:layout_constraintTop_toBottomOf="@+id/txtEndereco" />
 
     <EditText
-        android:id="@+id/editTextText14"
+        android:id="@+id/txtDataEvento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
         android:text="Data do evento"
-        app:layout_constraintStart_toStartOf="@+id/editTextText13"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText13" />
+        app:layout_constraintStart_toStartOf="@+id/txtNomePacote"
+        app:layout_constraintTop_toBottomOf="@+id/txtNomePacote" />
 
     <EditText
-        android:id="@+id/editTextText15"
+        android:id="@+id/txtQtdConvidados"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
         android:ems="10"
         android:inputType="text"
         android:text="Número de convidados"
-        app:layout_constraintStart_toStartOf="@+id/editTextText14"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText14" />
+        app:layout_constraintStart_toStartOf="@+id/txtDataEvento"
+        app:layout_constraintTop_toBottomOf="@+id/txtDataEvento" />
 
     <EditText
-        android:id="@+id/editTextText17"
+        android:id="@+id/txtHorarioTermino"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
         android:text="Horario de termino"
-        app:layout_constraintStart_toStartOf="@+id/editTextText18"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText16" />
+        app:layout_constraintStart_toStartOf="@+id/txtEnderecoEvento"
+        app:layout_constraintTop_toBottomOf="@+id/txtHorarioInicio" />
 
     <EditText
-        android:id="@+id/editTextText16"
+        android:id="@+id/txtHorarioInicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
         android:text="Horario de inicio"
-        app:layout_constraintStart_toStartOf="@+id/editTextText15"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText15" />
+        app:layout_constraintStart_toStartOf="@+id/txtQtdConvidados"
+        app:layout_constraintTop_toBottomOf="@+id/txtQtdConvidados" />
 
     <EditText
-        android:id="@+id/editTextText18"
+        android:id="@+id/txtEnderecoEvento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -138,7 +138,7 @@
         android:text="Endereço do local do evento"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText17" />
+        app:layout_constraintTop_toBottomOf="@+id/txtHorarioTermino" />
 
     <Button
         android:id="@+id/btnSolicitarOrcamento"
@@ -160,4 +160,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:text="Dados Cliente"
+        app:layout_constraintBottom_toTopOf="@+id/txtNome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtNome" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:text="Dados Evento"
+        app:layout_constraintBottom_toTopOf="@+id/txtNomePacote"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
