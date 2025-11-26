@@ -60,9 +60,9 @@ public class Tela_02_Orcamento extends AppCompatActivity {
 
         // Serve para checar se tem algum campo vazio
         paraValidar = new EditText[] {
-                txtNome, txtCpf, txtEmail, txtCelular,
-                txtEndereco, txtNomePacote, txtDataEvento, txtQtdConvidados,
-                txtHorarioInicio, txtHorarioTermino, txtEnderecoEvento
+            txtNome, txtCpf, txtEmail, txtCelular,
+            txtEndereco, txtNomePacote, txtDataEvento, txtQtdConvidados,
+            txtHorarioInicio, txtHorarioTermino, txtEnderecoEvento
         };
     }
     private void listeners() {
