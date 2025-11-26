@@ -18,12 +18,12 @@ public class Tela_02_Orcamento extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_tela02_orcamento);
 
         mainConfig();
         listeners();
         Log.e("ERRO", "Chegou aq!");
 
-        setContentView(R.layout.activity_tela02_orcamento);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -37,7 +37,9 @@ public class Tela_02_Orcamento extends AppCompatActivity {
     private void listeners() {
 
         // SAIR
-        btnCancelarOrcamento.setOnClickListener(evt -> {finish();});
+        btnCancelarOrcamento.setOnClickListener(evt -> {
+            finish();
+        });
 
     }
 
