@@ -2,6 +2,7 @@ package com.example.projeto_2;
 
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,9 +11,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class Tela_04_CadastroMusico extends AppCompatActivity {
-    private Button btnCancelarCadastroMusico;
-
-    // FALTA PEGAR OS CAMPOS
+    private Button btnCancelarCadastroMusico, btnCadastrarMusico;
+    private EditText txtCpfMusico, txtNomeMusico, txtInstrumentoMusico,
+            txtGenero, txtCelularMusico, txtEmailMusico, txtEnderecoMusico;
 
 
     @Override
@@ -33,6 +34,10 @@ public class Tela_04_CadastroMusico extends AppCompatActivity {
 
     private void mainConfig() {
         btnCancelarCadastroMusico = findViewById(R.id.btnCancelarCadastroMusico);
+        btnCancelarCadastroMusico = findViewById(R.id.btnCadastrarMusico);
+
+//        txtCpfMusico, txtNomeMusico, txtInstrumentoMusico,
+//                txtGenero, txtCelularMusico, txtEmailMusico, txtEnderecoMusico;
     }
     private void listeners() {
 
