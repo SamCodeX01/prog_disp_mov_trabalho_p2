@@ -40,6 +40,8 @@ public class MusicoDAO extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade (SQLiteDatabase sqliteDatabase, int i, int i1) {
+        sqliteDatabase.execSQL("DROP TABLE IF EXISTS " + TABELA_MUSICO);
+        onCreate(sqliteDatabase);
     }
 
     public void salvarMusico (Musico musico) {

@@ -85,6 +85,7 @@ public class Tela_02_Orcamento extends AppCompatActivity {
                     obj.setHorarioInicio(txtHorarioInicio.getText().toString());
                     obj.setHorarioTermino(txtHorarioTermino.getText().toString());
                     obj.setEnderecoEvento(txtEnderecoEvento.getText().toString());
+                    obj.setStatus("aberta");
                     orc.salvarOrcamento(obj);
 
                     Toast.makeText(this, "Seu orçamento foi enviado!", Toast.LENGTH_SHORT).show();

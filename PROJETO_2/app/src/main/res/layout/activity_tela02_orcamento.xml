@@ -26,8 +26,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
+        android:hint="Endereço"
         android:inputType="text"
-        android:text="Endereço"
         app:layout_constraintStart_toStartOf="@+id/txtCelular"
         app:layout_constraintTop_toBottomOf="@+id/txtCelular" />
 
@@ -37,8 +37,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:ems="10"
+        android:hint="Cpf"
         android:inputType="text"
-        android:text="Cpf"
         app:layout_constraintStart_toStartOf="@+id/txtNome"
         app:layout_constraintTop_toBottomOf="@+id/txtNome" />
 
@@ -48,8 +48,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="7dp"
         android:ems="10"
+        android:hint="Email"
         android:inputType="text"
-        android:text="Email"
         app:layout_constraintStart_toStartOf="@+id/txtCpf"
         app:layout_constraintTop_toBottomOf="@+id/txtCpf" />
 
@@ -59,8 +59,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="13dp"
         android:ems="10"
+        android:hint="Celular"
         android:inputType="text"
-        android:text="Celular"
         app:layout_constraintStart_toStartOf="@+id/txtEmail"
         app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
 
@@ -70,8 +70,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:ems="10"
+        android:hint="Nome completo"
         android:inputType="text"
-        android:text="Nome completo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -83,8 +83,8 @@
         android:layout_marginTop="36dp"
         android:layout_marginEnd="1dp"
         android:ems="10"
+        android:hint="Nome do pacote"
         android:inputType="text"
-        android:text="Nome do pacote"
         app:layout_constraintEnd_toEndOf="@+id/txtEndereco"
         app:layout_constraintTop_toBottomOf="@+id/txtEndereco" />
 
@@ -93,8 +93,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Data do evento"
         android:inputType="text"
-        android:text="Data do evento"
         app:layout_constraintStart_toStartOf="@+id/txtNomePacote"
         app:layout_constraintTop_toBottomOf="@+id/txtNomePacote" />
 
@@ -104,8 +104,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
         android:ems="10"
+        android:hint="Número de convidados"
         android:inputType="text"
-        android:text="Número de convidados"
         app:layout_constraintStart_toStartOf="@+id/txtDataEvento"
         app:layout_constraintTop_toBottomOf="@+id/txtDataEvento" />
 
@@ -114,8 +114,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Horario de término"
         android:inputType="text"
-        android:text="Horario de termino"
         app:layout_constraintStart_toStartOf="@+id/txtEnderecoEvento"
         app:layout_constraintTop_toBottomOf="@+id/txtHorarioInicio" />
 
@@ -124,8 +124,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Horario de início"
         android:inputType="text"
-        android:text="Horario de inicio"
         app:layout_constraintStart_toStartOf="@+id/txtQtdConvidados"
         app:layout_constraintTop_toBottomOf="@+id/txtQtdConvidados" />
 
@@ -134,8 +134,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Endereço do local do evento"
         android:inputType="text"
-        android:text="Endereço do local do evento"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtHorarioTermino" />

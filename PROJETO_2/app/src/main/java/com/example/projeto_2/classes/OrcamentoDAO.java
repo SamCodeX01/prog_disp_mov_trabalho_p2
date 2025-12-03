@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
+
 public class OrcamentoDAO extends SQLiteOpenHelper {
     public static final String TABELA_ORCAMENTO = "orcamento";
     public static final String COLUNA_ID = "id";
@@ -20,6 +22,7 @@ public class OrcamentoDAO extends SQLiteOpenHelper {
     public static final String COLUNA_HORARIOINICIO = "horarioInicio";
     public static final String COLUNA_HORARIOTERMINO = "horarioTermino";
     public static final String COLUNA_ENDERECOEVENTO = "enderecoEvento";
+    public static final String COLUNA_STATUS = "status";
 
     public OrcamentoDAO (Context context) {
         super(context, InfoBD.NOME_BANCO, null, InfoBD.VERSAO_BANCO);
@@ -40,12 +43,15 @@ public class OrcamentoDAO extends SQLiteOpenHelper {
                         COLUNA_QTDCONVIDADOS  + " TEXT NOT NULL, " +
                         COLUNA_HORARIOINICIO  + " TEXT NOT NULL, " +
                         COLUNA_HORARIOTERMINO + " TEXT NOT NULL, " +
-                        COLUNA_ENDERECOEVENTO + " TEXT NOT NULL) "
+                        COLUNA_ENDERECOEVENTO + " TEXT NOT NULL, " +
+                        COLUNA_STATUS         + " TEXT NOT NULL) "
         );
     }
 
     @Override
     public void onUpgrade (SQLiteDatabase sqliteDatabase, int i, int i1) {
+        sqliteDatabase.execSQL("DROP TABLE IF EXISTS " + TABELA_ORCAMENTO);
+        onCreate(sqliteDatabase);
     }
 
     public void salvarOrcamento (Orcamento orcamento) {
@@ -64,6 +70,7 @@ public class OrcamentoDAO extends SQLiteOpenHelper {
         valores.put(COLUNA_HORARIOINICIO, orcamento.getHorarioInicio());
         valores.put(COLUNA_HORARIOTERMINO, orcamento.getHorarioTermino());
         valores.put(COLUNA_ENDERECOEVENTO, orcamento.getEnderecoEvento());
+        valores.put(COLUNA_STATUS, orcamento.getStatus());
 
         db.insert(TABELA_ORCAMENTO, null, valores);
         db.close();
@@ -86,6 +93,7 @@ public class OrcamentoDAO extends SQLiteOpenHelper {
         valores.put(COLUNA_HORARIOINICIO, orcamento.getHorarioInicio());
         valores.put(COLUNA_HORARIOTERMINO, orcamento.getHorarioTermino());
         valores.put(COLUNA_ENDERECOEVENTO, orcamento.getEnderecoEvento());
+        valores.put(COLUNA_STATUS, orcamento.getStatus());
 
         //db.insert(TABELA_ORCAMENTO, null, valores);
         String parametro [] = {String.valueOf(orcamento.getId())};
@@ -104,7 +112,7 @@ public class OrcamentoDAO extends SQLiteOpenHelper {
         Orcamento orcamento;
         orcamento = new Orcamento();
         String parametro[] = { pnome };
-        String campos[] = {"id, nome, cpf, email, celular, endereco, nomePacote, dataEvento, qtdConvidados, horarioInicio, horarioTermino, enderecoEvento"};
+        String campos[] = {"id, nome, cpf, email, celular, endereco, nomePacote, dataEvento, qtdConvidados, horarioInicio, horarioTermino, enderecoEvento, status"};
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor cr = db.query (TABELA_ORCAMENTO,
@@ -130,9 +138,71 @@ public class OrcamentoDAO extends SQLiteOpenHelper {
             orcamento.setHorarioInicio(cr.getString(9));
             orcamento.setHorarioTermino(cr.getString(10));
             orcamento.setEnderecoEvento(cr.getString(11));
+            orcamento.setStatus(cr.getString(12));
         }
 
         db.close();
         return orcamento;
     }
+
+    public ArrayList<Orcamento> listarOrcamentos() {
+        ArrayList<Orcamento> lista = new ArrayList<>();
+
+        String campos[] = {
+                "id",
+                "nome",
+                "cpf",
+                "email",
+                "celular",
+                "endereco",
+                "nomePacote",
+                "dataEvento",
+                "qtdConvidados",
+                "horarioInicio",
+                "horarioTermino",
+                "enderecoEvento",
+                "status"
+        };
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cr = db.query(
+                TABELA_ORCAMENTO,
+                campos,
+                null,
+                null,
+                null,
+                null,
+                null
+        );
+
+        if (cr.moveToFirst()) {
+            do {
+                Orcamento orcamento = new Orcamento();
+
+                orcamento.setId(cr.getInt(0));
+                orcamento.setNome(cr.getString(1));
+                orcamento.setCpf(cr.getString(2));
+                orcamento.setEmail(cr.getString(3));
+                orcamento.setCelular(cr.getString(4));
+                orcamento.setEndereco(cr.getString(5));
+                orcamento.setNomePacote(cr.getString(6));
+                orcamento.setDataEvento(cr.getString(7));
+                orcamento.setQtdConvidados(cr.getString(8));
+                orcamento.setHorarioInicio(cr.getString(9));
+                orcamento.setHorarioTermino(cr.getString(10));
+                orcamento.setEnderecoEvento(cr.getString(11));
+                orcamento.setStatus(cr.getString(12));
+
+                lista.add(orcamento);
+
+            } while (cr.moveToNext());
+        }
+
+        cr.close();
+        db.close();
+
+        return lista;
+    }
+
 }

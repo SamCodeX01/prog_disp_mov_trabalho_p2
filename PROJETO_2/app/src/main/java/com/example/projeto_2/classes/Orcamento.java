@@ -13,6 +13,7 @@ public class Orcamento {
     private String horarioInicio;
     private String horarioTermino;
     private String enderecoEvento;
+    private String status;
 
 
     // Construtores
@@ -29,9 +30,10 @@ public class Orcamento {
         horarioInicio = "";
         horarioTermino = "";
         enderecoEvento = "";
+        status = "aberta";
     }
 
-    public Orcamento(int id, String nome, String cpf, String email, String celular, String endereco, String nomePacote, String dataEvento, String qtdConvidados, String horarioInicio, String horarioTermino, String enderecoEvento) {
+    public Orcamento(int id, String nome, String cpf, String email, String celular, String endereco, String nomePacote, String dataEvento, String qtdConvidados, String horarioInicio, String horarioTermino, String enderecoEvento, String status) {
         this.id = id;
         this.nome = nome;
         this.cpf = cpf;
@@ -44,6 +46,7 @@ public class Orcamento {
         this.horarioInicio = horarioInicio;
         this.horarioTermino = horarioTermino;
         this.enderecoEvento = enderecoEvento;
+        this.status = status;
     }
 
 
@@ -142,5 +145,13 @@ public class Orcamento {
 
     public void setEnderecoEvento(String enderecoEvento) {
         this.enderecoEvento = enderecoEvento;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
