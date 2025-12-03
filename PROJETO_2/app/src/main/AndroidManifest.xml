@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PROJETO_2">
         <activity
+            android:name=".Tela_SobreActivity"
+            android:exported="false" />
+        <activity
             android:name=".Tela_06_VisualizarSolicitacao"
             android:exported="false" />
         <activity
@@ -21,16 +24,14 @@
             android:name=".Tela_04_CadastroMusico"
             android:exported="false" />
         <activity
+            android:name=".Tela_03_Login"
+            android:exported="false" />
+        <activity
             android:name=".Tela_02_Orcamento"
             android:exported="false" />
         <activity
             android:name=".Tela_01_Home"
             android:exported="false" />
-        <activity
-            android:name=".Tela_03_Login"
-            android:exported="false" /> <!-- <activity -->
-        <!-- android:name=".Tela_00_Splash" -->
-        <!-- android:exported="false" /> -->
         <activity
             android:name=".Tela_00_Splash"
             android:exported="true">

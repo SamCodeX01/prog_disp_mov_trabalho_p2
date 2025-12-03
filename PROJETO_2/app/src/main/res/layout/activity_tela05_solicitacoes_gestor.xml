@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/blue"
     tools:context=".Tela_05_SolicitacoesGestor">
 
     <Button
@@ -13,7 +14,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:backgroundTint="#CCAB3A"
         android:text="CONCLUÍDAS"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnMostrarSolicitacoesAbertas"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -24,7 +28,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Quero visualizar solicitações:"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/btnMostrarSolicitacoesConcluidas"
         app:layout_constraintStart_toStartOf="@+id/btnMostrarSolicitacoesAbertas"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -35,7 +41,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="27dp"
+        android:backgroundTint="#CCAB3A"
         android:text="EM ABERTO"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/btnMostrarSolicitacoesConcluidas"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -46,7 +55,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Área do Gestor"
+        android:textColor="#FFFFFF"
         android:textSize="34sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -73,6 +84,7 @@
         android:layout_marginEnd="32dp"
         android:text="DADOS PUXADOS DO BANCO"
         android:textAlignment="center"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnMostrarSolicitacoesConcluidas" />

@@ -9,7 +9,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class SobreActivity extends AppCompatActivity {
+public class Tela_SobreActivity extends AppCompatActivity {
     private Button btnMain;
 
 

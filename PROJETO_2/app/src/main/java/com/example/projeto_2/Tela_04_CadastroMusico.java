@@ -1,6 +1,7 @@
 package com.example.projeto_2;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -40,6 +41,8 @@ public class Tela_04_CadastroMusico extends AppCompatActivity {
     }
 
     private void mainConfig() {
+        mus = new MusicoDAO(this);
+
         txtCpfMusico = findViewById(R.id.txtCpfMusico);
         txtNomeMusico = findViewById(R.id.txtNomeMusico);
         txtInstrumentoMusico = findViewById(R.id.txtInstrumentoMusico);
@@ -62,16 +65,14 @@ public class Tela_04_CadastroMusico extends AppCompatActivity {
         btnCadastrarMusico.setOnClickListener(evt -> {
             if (validarCampos()) {
                 try {
-                    // VERIFICAR SE O MÚSICO JÁ EXISTE PELO CPF!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
                     Musico obj = new Musico();
-                    obj.setNome(txtCpfMusico.getText().toString());
+                    obj.setCpf(txtCpfMusico.getText().toString());
                     obj.setNome(txtNomeMusico.getText().toString());
-                    obj.setNome(txtInstrumentoMusico.getText().toString());
-                    obj.setNome(txtGenero.getText().toString());
-                    obj.setNome(txtCelularMusico.getText().toString());
-                    obj.setNome(txtEmailMusico.getText().toString());
-                    obj.setNome(txtEnderecoMusico.getText().toString());
+                    obj.setInstrumentoQueToca(txtInstrumentoMusico.getText().toString());
+                    obj.setGenero(txtGenero.getText().toString());
+                    obj.setCelular(txtCelularMusico.getText().toString());
+                    obj.setEmail(txtEmailMusico.getText().toString());
+                    obj.setEndereco(txtEnderecoMusico.getText().toString());
                     mus.salvarMusico(obj);
 
                     Toast.makeText(this, "Cadastrado com sucesso!", Toast.LENGTH_SHORT).show();
@@ -79,6 +80,7 @@ public class Tela_04_CadastroMusico extends AppCompatActivity {
 
                 } catch (Exception e) {
                     Toast.makeText(this, "Algo de errado não está certo!", Toast.LENGTH_SHORT).show();
+                    Log.e("ERRO", e.toString());
                 }
             } else Toast.makeText(this, "Faltam campos a ser preenchidos!", Toast.LENGTH_SHORT).show();
         });

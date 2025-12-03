@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/blue"
     tools:context=".Tela_02_Orcamento">
 
     <Button
@@ -14,7 +15,10 @@
         android:layout_marginStart="18dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="4dp"
+        android:backgroundTint="#CCAB3A"
         android:text="CANCELAR"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnSolicitarOrcamento"
         app:layout_constraintHorizontal_chainStyle="packed"
@@ -22,120 +26,142 @@
 
     <EditText
         android:id="@+id/txtEndereco"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Endereço"
         android:inputType="text"
+        android:textColor="#000000"
+        android:textColorHint="#050505"
         app:layout_constraintStart_toStartOf="@+id/txtCelular"
         app:layout_constraintTop_toBottomOf="@+id/txtCelular" />
 
     <EditText
         android:id="@+id/txtCpf"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="Cpf"
         android:inputType="text"
+        android:textColor="#000000"
+        android:textColorHint="#050505"
         app:layout_constraintStart_toStartOf="@+id/txtNome"
         app:layout_constraintTop_toBottomOf="@+id/txtNome" />
 
     <EditText
         android:id="@+id/txtEmail"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="7dp"
         android:ems="10"
         android:hint="Email"
         android:inputType="text"
+        android:textColor="#000000"
+        android:textColorHint="#050505"
         app:layout_constraintStart_toStartOf="@+id/txtCpf"
         app:layout_constraintTop_toBottomOf="@+id/txtCpf" />
 
     <EditText
         android:id="@+id/txtCelular"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="13dp"
         android:ems="10"
         android:hint="Celular"
         android:inputType="text"
+        android:textColor="#000000"
+        android:textColorHint="#050505"
         app:layout_constraintStart_toStartOf="@+id/txtEmail"
         app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
 
     <EditText
         android:id="@+id/txtNome"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:ems="10"
         android:hint="Nome completo"
         android:inputType="text"
+        android:textColor="#000000"
+        android:textColorHint="#050505"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/txtNomePacote"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:layout_marginEnd="1dp"
         android:ems="10"
         android:hint="Nome do pacote"
         android:inputType="text"
+        android:textColor="#000000"
+        android:textColorHint="#050505"
         app:layout_constraintEnd_toEndOf="@+id/txtEndereco"
         app:layout_constraintTop_toBottomOf="@+id/txtEndereco" />
 
     <EditText
         android:id="@+id/txtDataEvento"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Data do evento"
         android:inputType="text"
+        android:textColor="#000000"
+        android:textColorHint="#050505"
         app:layout_constraintStart_toStartOf="@+id/txtNomePacote"
         app:layout_constraintTop_toBottomOf="@+id/txtNomePacote" />
 
     <EditText
         android:id="@+id/txtQtdConvidados"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
         android:ems="10"
         android:hint="Número de convidados"
         android:inputType="text"
+        android:textColor="#000000"
+        android:textColorHint="#050505"
         app:layout_constraintStart_toStartOf="@+id/txtDataEvento"
         app:layout_constraintTop_toBottomOf="@+id/txtDataEvento" />
 
     <EditText
         android:id="@+id/txtHorarioTermino"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Horario de término"
         android:inputType="text"
+        android:textColor="#000000"
+        android:textColorHint="#050505"
         app:layout_constraintStart_toStartOf="@+id/txtEnderecoEvento"
         app:layout_constraintTop_toBottomOf="@+id/txtHorarioInicio" />
 
     <EditText
         android:id="@+id/txtHorarioInicio"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Horario de início"
         android:inputType="text"
+        android:textColor="#000000"
+        android:textColorHint="#050505"
         app:layout_constraintStart_toStartOf="@+id/txtQtdConvidados"
         app:layout_constraintTop_toBottomOf="@+id/txtQtdConvidados" />
 
     <EditText
         android:id="@+id/txtEnderecoEvento"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Endereço do local do evento"
         android:inputType="text"
+        android:textColor="#000000"
+        android:textColorHint="#050505"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtHorarioTermino" />
@@ -145,7 +171,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
+        android:backgroundTint="#CCAB3A"
         android:text="SOLICITAR ORÇAMENTO"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnCancelarOrcamento" />
@@ -156,7 +184,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Pedido de Orçamento"
+        android:textColor="#F4F4F4"
+        android:textColorHint="#FFFFFF"
         android:textSize="34sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -167,6 +198,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
         android:text="Dados Cliente"
+        android:textColor="#F4F4F4"
+        android:textColorHint="#FFFFFF"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/txtNome"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txtNome" />
@@ -177,6 +211,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="34dp"
         android:text="Dados Evento"
+        android:textColor="#F4F4F4"
+        android:textColorHint="#FFFFFF"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/txtNomePacote"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

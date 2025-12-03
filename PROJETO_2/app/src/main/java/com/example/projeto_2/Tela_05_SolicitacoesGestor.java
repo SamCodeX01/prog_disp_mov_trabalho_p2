@@ -1,5 +1,6 @@
 package com.example.projeto_2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -67,18 +68,13 @@ public class Tela_05_SolicitacoesGestor extends AppCompatActivity {
 
         adapter = new OrcamentoAdapter(listaFiltrada, new OrcamentoAdapter.OnCardActionListener() {
             @Override
-            public void onAbrirServico(Orcamento orc, int position) {
-
-                orc.setStatus("em execução");
-//                dao.atualizarStatus(orc.getId(), "em execução");
-
-                adapter.atualizarItem(position);
+            public void onCardClicado(Orcamento orc, int position) {
+                // 👉 Aqui sim você abre outra Activity
+                Intent intent = new Intent(Tela_05_SolicitacoesGestor.this, Tela_06_VisualizarSolicitacao.class);
+                intent.putExtra("nomeCliente", orc.getNome());
+                startActivity(intent);
             }
 
-            @Override
-            public void onBaixarContrato(Orcamento orc, int position) {
-                Log.d("SOLICITACOES", "Baixar contrato do ID " + orc.getId());
-            }
         });
 
         rv.setAdapter(adapter);
