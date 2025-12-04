@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class BancoHelper extends SQLiteOpenHelper {
 
     public static final String NOME_BANCO = "bdservicos";
-    public static final int VERSAO_BANCO = 8;
+    public static final int VERSAO_BANCO = 10;
 
     public BancoHelper(Context ctx) {
         super(ctx, NOME_BANCO, null, VERSAO_BANCO);

@@ -1,15 +1,20 @@
 package com.example.projeto_2;
 
+import static android.widget.Toast.LENGTH_SHORT;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.example.projeto_2.classes.OrcamentoDAO;
 
 public class Tela_01_Home extends AppCompatActivity {
     private Button btnOrcamento, btnIntranet;
@@ -43,7 +48,12 @@ public class Tela_01_Home extends AppCompatActivity {
 
         // Botão INTRANET (login)
         btnIntranet.setOnClickListener(evt -> {
-            startActivity(new Intent(this, Tela_03_Login.class));
+
+            // Verifica se tem no mínimo 1 orçamento solicitado antes de mostrar o sistema
+            if (new OrcamentoDAO(this).listarOrcamentos().isEmpty())
+                Toast.makeText(this, "Nenhuma solicitação encontrada! Cadastre primeiro (min 1)", LENGTH_SHORT).show();
+            else
+                startActivity(new Intent(this, Tela_03_Login.class));
         });
 
         // Botão de SOLICITAÇÃO DE ORÇAMENTO
