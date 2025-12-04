@@ -24,7 +24,7 @@ public class Tela_05_SolicitacoesGestor extends AppCompatActivity {
     private OrcamentoDAO orc;
     private ArrayList<Orcamento> orcamentos;
     private OrcamentoAdapter adapter;
-    private Button btnMostrarSolicitacoesAbertas, btnMostrarSolicitacoesConcluidas;
+    private Button btnMostrarSolicitacoesAbertas, btnMostrarSolicitacoesConcluidas, btnVoltarT5;
 
 
     @Override
@@ -50,6 +50,7 @@ public class Tela_05_SolicitacoesGestor extends AppCompatActivity {
 
         btnMostrarSolicitacoesAbertas = findViewById(R.id.btnMostrarSolicitacoesAbertas);
         btnMostrarSolicitacoesConcluidas = findViewById(R.id.btnMostrarSolicitacoesConcluidas);
+        btnVoltarT5 = findViewById(R.id.btnVoltarT5);
     }
 
     private void mostrarSolicitacoes(String queroSolicitacoesEm) {
@@ -73,6 +74,7 @@ public class Tela_05_SolicitacoesGestor extends AppCompatActivity {
                 Intent intent = new Intent(Tela_05_SolicitacoesGestor.this, Tela_06_VisualizarSolicitacao.class);
                 intent.putExtra("nomeCliente", orc.getNome());
                 startActivity(intent);
+                finish();
             }
 
         });
@@ -85,6 +87,9 @@ public class Tela_05_SolicitacoesGestor extends AppCompatActivity {
     private void listeners() {
         btnMostrarSolicitacoesAbertas.setOnClickListener(evt -> mostrarSolicitacoes("aberta"));
         btnMostrarSolicitacoesConcluidas.setOnClickListener(evt -> mostrarSolicitacoes("concluida"));
+
+        // Volta para a tela anterior
+        btnVoltarT5.setOnClickListener(evt -> finish());
     }
 
 }

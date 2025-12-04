@@ -1,6 +1,7 @@
 package com.example.projeto_2.classes;
 
 public class Musico {
+    public static int queroQtdMusicos = 0;
     private int id;
     private String cpf;
     private String nome;
