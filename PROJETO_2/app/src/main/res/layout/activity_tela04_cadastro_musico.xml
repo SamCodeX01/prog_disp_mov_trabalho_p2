@@ -5,152 +5,166 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     android:background="@color/blue"
     tools:context=".Tela_04_CadastroMusico">
 
+    <!-- TÍTULO -->
+    <TextView
+        android:id="@+id/textTituloMusico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastro do Músico"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Botão Cancelar -->
     <Button
         android:id="@+id/btnCancelarCadastroMusico"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="#CCAB3A"
+        android:layout_width="160dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/gold"
         android:text="CANCELAR"
-        android:textSize="16sp"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnCadastrarMusico"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@id/btnCadastrarMusico"
+        app:layout_constraintStart_toStartOf="@id/scrollMusico" />
 
-    <EditText
-        android:id="@+id/txtEmailMusico"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:ems="10"
-        android:hint="Email"
-        android:inputType="text"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        app:layout_constraintEnd_toEndOf="@+id/txtEnderecoMusico"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/txtEnderecoMusico"
-        app:layout_constraintTop_toBottomOf="@+id/txtCelularMusico" />
-
-    <EditText
-        android:id="@+id/txtInstrumentoMusico"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="Instrumento que toca"
-        android:inputType="text"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        app:layout_constraintEnd_toEndOf="@+id/txtGenero"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/txtGenero"
-        app:layout_constraintTop_toBottomOf="@+id/txtNomeMusico" />
-
-    <EditText
-        android:id="@+id/txtCpfMusico"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
-        android:ems="10"
-        android:hint="Cpf"
-        android:inputType="text"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        app:layout_constraintEnd_toEndOf="@+id/txtNomeMusico"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/txtNomeMusico"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/txtNomeMusico"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:ems="10"
-        android:hint="Nome"
-        android:inputType="text"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        app:layout_constraintEnd_toEndOf="@+id/txtInstrumentoMusico"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/txtInstrumentoMusico"
-        app:layout_constraintTop_toBottomOf="@+id/txtCpfMusico" />
-
-    <EditText
-        android:id="@+id/txtGenero"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:ems="10"
-        android:hint="Genero"
-        android:inputType="text"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        app:layout_constraintEnd_toEndOf="@+id/txtCelularMusico"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/txtCelularMusico"
-        app:layout_constraintTop_toBottomOf="@+id/txtInstrumentoMusico" />
-
-    <EditText
-        android:id="@+id/txtCelularMusico"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:ems="10"
-        android:hint="Celular"
-        android:inputType="text"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        app:layout_constraintEnd_toEndOf="@+id/txtEmailMusico"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/txtEmailMusico"
-        app:layout_constraintTop_toBottomOf="@+id/txtGenero" />
-
-    <EditText
-        android:id="@+id/txtEnderecoMusico"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:ems="10"
-        android:hint="Endereco"
-        android:inputType="text"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEmailMusico" />
-
+    <!-- Botão Cadastrar -->
     <Button
         android:id="@+id/btnCadastrarMusico"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="19dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="#CCAB3A"
+        android:layout_width="160dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/gold"
         android:text="CADASTRAR"
-        android:textSize="16sp"
+        android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnCancelarCadastroMusico" />
+        app:layout_constraintEnd_toEndOf="@id/scrollMusico"
+        app:layout_constraintStart_toEndOf="@id/btnCancelarCadastroMusico" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="Cadastro do Músico"
-        android:textColor="#FFFFFF"
-        android:textSize="34sp"
-        android:textStyle="bold"
+    <!-- SCROLL -->
+    <ScrollView
+        android:id="@+id/scrollMusico"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/btnCancelarCadastroMusico"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/textTituloMusico">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- SEÇÃO DADOS DO MÚSICO -->
+            <TextView
+                android:id="@+id/textSecaoMusico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Dados do Músico"
+                android:textColor="@color/gold"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtCpfMusico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="CPF"
+                android:padding="12dp"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="#cccccc"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/txtNomeMusico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Nome completo"
+                android:padding="12dp"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="#cccccc"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/txtGeneroMusico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Gênero"
+                android:padding="12dp"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="#cccccc"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/txtInstrumentoMusico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Instrumento que toca"
+                android:padding="12dp"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="#cccccc"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/txtCelularMusico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Celular"
+                android:padding="12dp"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="#cccccc"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/txtEmailMusico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Email"
+                android:padding="12dp"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="#cccccc"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/txtEnderecoMusico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Endereço"
+                android:padding="12dp"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="#cccccc"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

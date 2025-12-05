@@ -64,13 +64,15 @@ public class Tela_03_Login extends AppCompatActivity {
             int qtdMinMusicos = Musico.queroQtdMusicos;
             int qtdMusicosCadastrados = new MusicoDAO(this).listarMusicos().size();
 
-//            if (user.equals("Admin") && password.equals("123"))
+            if (user.equals("Admin") && password.equals("123"))
             {
                 if (qtdMusicosCadastrados >= qtdMinMusicos)
                     startActivity(new Intent(this, Tela_05_SolicitacoesGestor.class));
                 else
                     Toast.makeText(this, "Músicos insulficientes (mín " + qtdMinMusicos + "). \nCadastre mais músicos no sistema!" , LENGTH_SHORT).show();
             }
+            else
+                Toast.makeText(this, "Usuário ou senha errados!", LENGTH_SHORT).show();
         });
 
         // Botão de CADASTRO DE MÚSICO

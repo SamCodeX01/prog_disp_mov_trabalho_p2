@@ -46,7 +46,7 @@ public class Tela_04_CadastroMusico extends AppCompatActivity {
         txtCpfMusico = findViewById(R.id.txtCpfMusico);
         txtNomeMusico = findViewById(R.id.txtNomeMusico);
         txtInstrumentoMusico = findViewById(R.id.txtInstrumentoMusico);
-        txtGenero = findViewById(R.id.txtGenero);
+        txtGenero = findViewById(R.id.txtGeneroMusico);
         txtCelularMusico = findViewById(R.id.txtCelularMusico);
         txtEmailMusico = findViewById(R.id.txtEmailMusico);
         txtEnderecoMusico = findViewById(R.id.txtEnderecoMusico);

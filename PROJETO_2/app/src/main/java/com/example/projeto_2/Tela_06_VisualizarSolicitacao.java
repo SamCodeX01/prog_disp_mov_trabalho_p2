@@ -2,6 +2,7 @@ package com.example.projeto_2;
 
 import static android.view.View.INVISIBLE;
 import static android.view.View.VISIBLE;
+import static android.widget.Toast.LENGTH_LONG;
 import static android.widget.Toast.LENGTH_SHORT;
 
 import android.content.Intent;
@@ -138,7 +139,7 @@ public class Tela_06_VisualizarSolicitacao extends AppCompatActivity {
 
             // Atualiza o status da solicitação //
             orcamentoDAO.atualizarStatus(orcamento.getId(), "concluida");
-            Toast.makeText(this, "Solicitação liberada no sistema! \n(volte para a tela anterior)", LENGTH_SHORT).show();
+            Toast.makeText(this, "Solicitação liberada no sistema! \n(volte para a tela anterior)", LENGTH_LONG).show();
 
             startActivity(new Intent(this, Tela_05_SolicitacoesGestor.class));
             finish();
@@ -184,6 +185,11 @@ public class Tela_06_VisualizarSolicitacao extends AppCompatActivity {
                 .append("Custo de aluguel dos equipamentos: R$XXXX,XX\n")
                 .append("TOTAL: R$XXXX,XX\n");
 
+            // ----------- ENVIO ----------- //
+            conteudoBuilder.append("ENVIAR PDF:\n")
+                .append("-> por email\n")
+                .append("-> por whatsapp\n");
+
             // Centraliza a string construída em uma só
             String conteudo = conteudoBuilder.toString();
 
@@ -212,7 +218,7 @@ public class Tela_06_VisualizarSolicitacao extends AppCompatActivity {
             try {
                 startActivity(intent);
             } catch (Exception e) {
-                Toast.makeText(this, "Nenhum app de PDF encontrado.", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Nenhum app de PDF encontrado.", LENGTH_LONG).show();
             }
         });
 

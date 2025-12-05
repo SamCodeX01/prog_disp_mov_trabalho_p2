@@ -5,215 +5,220 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     android:background="@color/blue"
     tools:context=".Tela_02_Orcamento">
 
-    <Button
-        android:id="@+id/btnCancelarOrcamento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="4dp"
-        android:backgroundTint="#CCAB3A"
-        android:text="CANCELAR"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnSolicitarOrcamento"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/txtEndereco"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Endereço"
-        android:inputType="text"
-        android:textColor="#000000"
-        android:textColorHint="#050505"
-        app:layout_constraintStart_toStartOf="@+id/txtCelular"
-        app:layout_constraintTop_toBottomOf="@+id/txtCelular" />
-
-    <EditText
-        android:id="@+id/txtCpf"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:ems="10"
-        android:hint="Cpf"
-        android:inputType="text"
-        android:textColor="#000000"
-        android:textColorHint="#050505"
-        app:layout_constraintStart_toStartOf="@+id/txtNome"
-        app:layout_constraintTop_toBottomOf="@+id/txtNome" />
-
-    <EditText
-        android:id="@+id/txtEmail"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
-        android:ems="10"
-        android:hint="Email"
-        android:inputType="text"
-        android:textColor="#000000"
-        android:textColorHint="#050505"
-        app:layout_constraintStart_toStartOf="@+id/txtCpf"
-        app:layout_constraintTop_toBottomOf="@+id/txtCpf" />
-
-    <EditText
-        android:id="@+id/txtCelular"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:ems="10"
-        android:hint="Celular"
-        android:inputType="text"
-        android:textColor="#000000"
-        android:textColorHint="#050505"
-        app:layout_constraintStart_toStartOf="@+id/txtEmail"
-        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
-
-    <EditText
-        android:id="@+id/txtNome"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:ems="10"
-        android:hint="Nome completo"
-        android:inputType="text"
-        android:textColor="#000000"
-        android:textColorHint="#050505"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <EditText
-        android:id="@+id/txtNomePacote"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="1dp"
-        android:ems="10"
-        android:hint="Nome do pacote"
-        android:inputType="text"
-        android:textColor="#000000"
-        android:textColorHint="#050505"
-        app:layout_constraintEnd_toEndOf="@+id/txtEndereco"
-        app:layout_constraintTop_toBottomOf="@+id/txtEndereco" />
-
-    <EditText
-        android:id="@+id/txtDataEvento"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Data do evento"
-        android:inputType="text"
-        android:textColor="#000000"
-        android:textColorHint="#050505"
-        app:layout_constraintStart_toStartOf="@+id/txtNomePacote"
-        app:layout_constraintTop_toBottomOf="@+id/txtNomePacote" />
-
-    <EditText
-        android:id="@+id/txtQtdConvidados"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:ems="10"
-        android:hint="Número de convidados"
-        android:inputType="text"
-        android:textColor="#000000"
-        android:textColorHint="#050505"
-        app:layout_constraintStart_toStartOf="@+id/txtDataEvento"
-        app:layout_constraintTop_toBottomOf="@+id/txtDataEvento" />
-
-    <EditText
-        android:id="@+id/txtHorarioTermino"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Horario de término"
-        android:inputType="text"
-        android:textColor="#000000"
-        android:textColorHint="#050505"
-        app:layout_constraintStart_toStartOf="@+id/txtEnderecoEvento"
-        app:layout_constraintTop_toBottomOf="@+id/txtHorarioInicio" />
-
-    <EditText
-        android:id="@+id/txtHorarioInicio"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Horario de início"
-        android:inputType="text"
-        android:textColor="#000000"
-        android:textColorHint="#050505"
-        app:layout_constraintStart_toStartOf="@+id/txtQtdConvidados"
-        app:layout_constraintTop_toBottomOf="@+id/txtQtdConvidados" />
-
-    <EditText
-        android:id="@+id/txtEnderecoEvento"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Endereço do local do evento"
-        android:inputType="text"
-        android:textColor="#000000"
-        android:textColorHint="#050505"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtHorarioTermino" />
-
-    <Button
-        android:id="@+id/btnSolicitarOrcamento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:backgroundTint="#CCAB3A"
-        android:text="SOLICITAR ORÇAMENTO"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnCancelarOrcamento" />
-
+    <!-- TÍTULO -->
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="Pedido de Orçamento"
-        android:textColor="#F4F4F4"
-        android:textColorHint="#FFFFFF"
-        android:textSize="34sp"
+        android:textColor="@color/white"
+        android:textSize="28sp"
         android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnCancelarOrcamento"
+        android:layout_width="160dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/gold"
+        android:text="CANCELAR"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnSolicitarOrcamento"
+        app:layout_constraintStart_toStartOf="@+id/scrollView2" />
+
+    <!-- Solicitar -->
+    <Button
+        android:id="@+id/btnSolicitarOrcamento"
+        android:layout_width="160dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/gold"
+        android:text="SOLICITAR ORÇAMENTO"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/scrollView2"
+        app:layout_constraintStart_toEndOf="@id/btnCancelarOrcamento" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCancelarOrcamento"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:text="Dados Cliente"
-        android:textColor="#F4F4F4"
-        android:textColorHint="#FFFFFF"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/txtNome"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtNome" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
-        android:text="Dados Evento"
-        android:textColor="#F4F4F4"
-        android:textColorHint="#FFFFFF"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/txtNomePacote"
-        app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Dados Cliente"
+                android:textColor="@color/gold"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Nome completo"
+                android:padding="12dp"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="#cccccc"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/txtCpf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Cpf"
+                android:padding="12dp"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="#cccccc"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Email"
+                android:padding="12dp"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="#cccccc"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/txtCelular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Celular"
+                android:padding="12dp"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="#cccccc"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/txtEndereco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Endereço"
+                android:padding="12dp"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="#cccccc"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:text="Dados Evento"
+                android:textColor="@color/gold"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtNomePacote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Nome do pacote"
+                android:padding="12dp"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="#cccccc"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/txtDataEvento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Data do evento"
+                android:padding="12dp"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="#cccccc"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/txtQtdConvidados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Número de convidados"
+                android:padding="12dp"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="#cccccc"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/txtHorarioInicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Horário de início"
+                android:padding="12dp"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="#cccccc"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/txtHorarioTermino"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Horário de término"
+                android:padding="12dp"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="#cccccc"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/txtEnderecoEvento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Endereço do local do evento"
+                android:padding="12dp"
+                android:textColor="@color/dark_gray"
+                android:textColorHint="#cccccc"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
